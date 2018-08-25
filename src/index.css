@@ -1,0 +1,12 @@
+body {
+  font: 16px "Fira Sans", sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.disabled {
+  text-decoration: line-through;
+}
