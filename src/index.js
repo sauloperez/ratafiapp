@@ -2,7 +2,39 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Ingredient extends React.Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ingredients: [
+        { id: 1, name: "Nous" },
+        { id: 2, name: "Brot verd d'esbarzer" },
+      ]
+    }
+  }
+
+  render() {
+    return (
+      <IngredientList ingredients={this.state.ingredients}/>
+    );
+  }
+}
+
+class IngredientList extends React.Component {
+  render() {
+    return (
+      <ul>
+        {this.props.ingredients.map(ingredient => (
+          <IngredientListItem
+            key={ingredient.id}
+            name={ingredient.name} />
+        ))}
+      </ul>
+    );
+  }
+}
+
+class IngredientListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,20 +54,9 @@ class Ingredient extends React.Component {
   }
 }
 
-class List extends React.Component {
-  render() {
-    return (
-      <ul>
-        <Ingredient name="Nous"/>
-        <Ingredient name="Brot verd d'esbarzer"/>
-      </ul>
-    );
-  }
-}
-
 // ========================================
 
 ReactDOM.render(
-  <List />,
+  <App />,
   document.getElementById('root')
 );
