@@ -74,18 +74,16 @@ class IngredientForm extends React.Component {
   }
 }
 
-class IngredientList extends React.Component {
-  render() {
-    return (
-      <ul>
-        {this.props.ingredients.map(ingredient => (
-          <IngredientListItem
-            key={ingredient.id}
-            name={ingredient.name} />
-        ))}
-      </ul>
-    );
-  }
+function IngredientList(props) {
+  return (
+    <ul>
+      {props.ingredients.map(ingredient => (
+        <IngredientListItem
+          key={ingredient.id}
+          name={ingredient.name} />
+      ))}
+    </ul>
+  );
 }
 
 class IngredientListItem extends React.Component {
