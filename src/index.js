@@ -29,10 +29,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <IngredientForm onIngredientSubmit={this.addIngredient}/>
         <IngredientList ingredients={this.state.ingredients}/>
-      </div>
+      </React.Fragment>
     );
   }
 }
