@@ -92,13 +92,21 @@ class IngredientListItem extends React.Component {
     this.state = {
       enabled: true,
     };
+
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+  handleClick() {
+    this.setState((prevState, props) => {
+      return {enabled: !prevState.enabled}
+    });
   }
 
   render() {
     return (
       <li
         className={this.state.enabled ? 'enabled' : 'disabled'}
-        onClick={() => this.setState({enabled: !this.state.enabled})}
+        onClick={this.handleClick}
       >
         {this.props.name}
       </li>
