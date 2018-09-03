@@ -25,13 +25,12 @@ class IngredientForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
+          autoFocus
           name="name"
           type="text"
           placeholder={this.state.placeholder}
           value={this.state.value}
           onChange={this.handleChange}/>
-
-        <input type="submit" value="Submit" />
       </form>
     )
   }
