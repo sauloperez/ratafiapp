@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import IngredientList from './ingredient_list.js'
+import IngredientForm from './ingredient_form.js'
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -51,69 +54,6 @@ class App extends React.Component {
       </React.Fragment>
     );
   }
-}
-
-class IngredientForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: '',
-      placeholder: 'Hipèric'
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
-    this.props.onIngredientSubmit(this.state.value);
-  }
-
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          name="name"
-          type="text"
-          placeholder={this.state.placeholder}
-          value={this.state.value}
-          onChange={this.handleChange}/>
-
-        <input type="submit" value="Submit" />
-      </form>
-    )
-  }
-}
-
-function IngredientList(props) {
-  return (
-    <ul>
-      {props.ingredients.map(ingredient => {
-        return <IngredientListItem
-          onClick={props.onClick}
-          key={ingredient.id}
-          id={ingredient.id}
-          name={ingredient.name}
-          collected={ingredient.collected} />
-      })}
-    </ul>
-  );
-}
-
-function IngredientListItem(props) {
-  return (
-    <li
-      onClick={() => props.onClick(props.id)}
-      className={props.collected ? 'disabled' : 'enabled'}
-    >
-      {props.name}
-    </li>
-  );
 }
 
 // ========================================
