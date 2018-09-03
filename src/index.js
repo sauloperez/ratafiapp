@@ -61,12 +61,17 @@ class App extends React.Component {
       );
     }
 
+    const uncollectedIngredients = this.state.ingredients.filter(
+      ingredient => !ingredient.collected
+    );
+
     return (
       <React.Fragment>
         <IngredientForm onIngredientSubmit={this.addIngredient}/>
         <IngredientList
           ingredients={shownIngredients}
           onClick={this.onItemClickHandler} />
+        <ListItemsCounter count={uncollectedIngredients.length} />
         <ListItemsToggler
           onLabel="Show all"
           offLabel="Hide collected"
@@ -74,6 +79,12 @@ class App extends React.Component {
       </React.Fragment>
     );
   }
+}
+
+function ListItemsCounter(props) {
+  return (
+    <span>{props.count} left</span>
+  );
 }
 
 // ========================================
