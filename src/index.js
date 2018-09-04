@@ -39,7 +39,7 @@ class App extends React.Component {
     const clickedIngredient = ingredients.find(
       ingredient => ingredient.id === id
     );
-    clickedIngredient.collected = true;
+    clickedIngredient.collected = !clickedIngredient.collected;
     this.setState({ ingredients: ingredients });
   }
 
