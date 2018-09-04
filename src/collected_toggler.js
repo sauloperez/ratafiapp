@@ -19,7 +19,7 @@ class ListItemsToggler extends React.Component {
     const { onLabel, offLabel } = this.props;
 
     return (
-      <button onClick={this.onClickHandler}>
+      <button onClick={this.onClickHandler} style={this.props.style}>
         {this.state.enabled ? onLabel : offLabel}
       </button>
     );

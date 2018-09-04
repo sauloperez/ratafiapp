@@ -66,8 +66,10 @@ class App extends React.Component {
     );
 
     return (
-      <React.Fragment>
-        <IngredientForm onIngredientSubmit={this.addIngredient}/>
+      <div className='ingredients-container'>
+        <IngredientForm
+          className='ingredient-form'
+          onIngredientSubmit={this.addIngredient}/>
         <IngredientList
           ingredients={shownIngredients}
           onClick={this.onItemClickHandler} />
@@ -75,8 +77,9 @@ class App extends React.Component {
         <ListItemsToggler
           onLabel="Show all"
           offLabel="Hide collected"
+          style={{float: 'right'}}
           onClick={this.onListItemsTogglerClickHandler} />
-      </React.Fragment>
+      </div>
     );
   }
 }

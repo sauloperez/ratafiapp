@@ -4,9 +4,35 @@ body {
 }
 
 ol, ul {
-  padding-left: 30px;
+  padding-left: 0;
+}
+
+.ingredients-container {
+  width: 480px;
+  margin: 0 auto;
+}
+
+input {
+  font-size: 16px;
+}
+
+.ingredient-form input[name="name"] {
+  width: 458px;
+  padding: 10px;
+  border: none;
 }
 
 .disabled {
   text-decoration: line-through;
+}
+
+.ingredient-list-item {
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+li.ingredient-list-item {
+  list-style: none;
 }

@@ -77,6 +77,19 @@ class IngredientListItem extends React.Component {
     }
   }
 
+  getClassName() {
+    let className = 'ingredient-list-item';
+
+    if (this.props.collected) {
+      className += ' disabled';
+    }
+    else {
+      className += ' enabled';
+    }
+
+    return className;
+  }
+
   render() {
     let item;
 
@@ -93,7 +106,7 @@ class IngredientListItem extends React.Component {
 
     return (
       <li
-        className={this.props.collected ? 'disabled' : 'enabled'}
+        className={this.getClassName()}
       >
         <input
           type="checkbox"

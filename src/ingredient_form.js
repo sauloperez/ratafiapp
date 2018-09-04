@@ -23,7 +23,10 @@ class IngredientForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        className={this.props.className}
+        onSubmit={this.handleSubmit}
+      >
         <input
           autoFocus
           name="name"
