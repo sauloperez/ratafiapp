@@ -7,13 +7,29 @@ ol, ul {
   padding-left: 0;
 }
 
+h1 {
+  margin: 1.5em 0;
+}
+
+.subtle {
+  color: #ccc;
+}
+
+.ingredient-list-header h1 {
+  margin-top: 0;
+}
+
+.ingredient-list-header p {
+  margin-bottom: 0.6em;
+}
+
 .ingredients-container {
   width: 480px;
-  margin: 0 auto;
+  margin: 80px auto;
 }
 
 input {
-  font-size: 16px;
+  font: 16px "Fira Sans", sans-serif;
 }
 
 .ingredient-form input[name="name"] {

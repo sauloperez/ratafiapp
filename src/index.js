@@ -11,6 +11,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       showAll: false,
+      listName: 'Edició 2018',
       ingredients: [
         { id: 1, name: "Nous", amount: '4 unitats', collected: false },
         { id: 2, name: "Brot verd d'esbarzer", amount: '1 brot', collected: false },
@@ -68,8 +69,23 @@ class App extends React.Component {
       ingredient => !ingredient.collected
     );
 
+    function IngredientListHeader(props) {
+      const { listName, count } = props;
+
+      return (
+        <header className='ingredient-list-header'>
+          <p className='subtle'>{count} ingredients</p>
+          <h1>{listName}</h1>
+        </header>
+      );
+    }
+
     return (
       <div className='ingredients-container'>
+        <IngredientListHeader
+          listName={this.state.listName}
+          count={this.state.ingredients.length}
+        />
         <IngredientForm
           className='ingredient-form'
           onIngredientSubmit={this.addIngredient}/>
@@ -89,7 +105,7 @@ class App extends React.Component {
 
 function ListItemsCounter(props) {
   return (
-    <span>{props.count} left</span>
+    <span className='subtle'>{props.count} left</span>
   );
 }
 
