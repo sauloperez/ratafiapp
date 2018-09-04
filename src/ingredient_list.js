@@ -4,12 +4,7 @@ function IngredientList(props) {
   return (
     <ul>
       {props.ingredients.map(ingredient => {
-        return <IngredientListItem
-          onClick={props.onClick}
-          key={ingredient.id}
-          id={ingredient.id}
-          name={ingredient.name}
-          collected={ingredient.collected} />
+        return <IngredientListItem onClick={props.onClick} {...ingredient} />
       })}
     </ul>
   );
@@ -105,15 +100,14 @@ class IngredientListItem extends React.Component {
     }
 
     return (
-      <li
-        className={this.getClassName()}
-      >
+      <li className={this.getClassName()}>
         <input
           type="checkbox"
           checked={this.props.collected}
           onChange={() => this.props.onClick(this.props.id)}
         />
         {item}
+        <span style={{float: 'right'}} className='subtle'>{this.props.amount}</span>
       </li>
     );
   }

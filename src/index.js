@@ -12,8 +12,11 @@ class App extends React.Component {
     this.state = {
       showAll: false,
       ingredients: [
-        { id: 1, name: "Nous", collected: false },
-        { id: 2, name: "Brot verd d'esbarzer", collected: false },
+        { id: 1, name: "Nous", amount: '4 unitats', collected: false },
+        { id: 2, name: "Brot verd d'esbarzer", amount: '1 brot', collected: false },
+        { id: 3, name: "Fonoll", amount: '2 unitats', collected: false },
+        { id: 4, name: "Cua de cavall", amount: '1 unitat', collected: false },
+        { id: 5, name: "Sempre viva", amount: '3 unitats', collected: false },
       ]
     }
 
