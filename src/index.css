@@ -15,12 +15,25 @@ h1 {
   color: #ccc;
 }
 
+.ingredient-list-header .title {
+  display: flex;
+  flex-direction: row;
+}
+
 .ingredient-list-header h1 {
   margin-top: 0;
 }
 
 .ingredient-list-header p {
   margin-bottom: 0.6em;
+}
+
+.action-icon {
+  visibility: hidden;
+}
+
+.ingredient-list-header:hover .action-icon {
+  visibility: visible;
 }
 
 .ingredients-container {

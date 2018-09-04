@@ -4,7 +4,7 @@ function IngredientList(props) {
   return (
     <ul>
       {props.ingredients.map(ingredient => {
-        return <IngredientListItem onClick={props.onClick} {...ingredient} />
+        return <IngredientListItem key={ingredient.id} onClick={props.onClick} {...ingredient} />
       })}
     </ul>
   );

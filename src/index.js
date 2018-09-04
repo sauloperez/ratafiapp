@@ -2,9 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faPencilAlt)
+
 import IngredientList from './ingredient_list.js'
 import IngredientForm from './ingredient_form.js'
 import ListItemsToggler from './collected_toggler.js'
+import IngredientListHeader from './list_header.jsx'
 
 class App extends React.Component {
   constructor(props) {
@@ -68,17 +74,6 @@ class App extends React.Component {
     const uncollectedIngredients = this.state.ingredients.filter(
       ingredient => !ingredient.collected
     );
-
-    function IngredientListHeader(props) {
-      const { listName, count } = props;
-
-      return (
-        <header className='ingredient-list-header'>
-          <p className='subtle'>{count} ingredients</p>
-          <h1>{listName}</h1>
-        </header>
-      );
-    }
 
     return (
       <div className='ingredients-container'>
