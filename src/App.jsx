@@ -1,10 +1,10 @@
 import React from 'react';
 
-import IngredientList from './ingredient_list.js';
-import IngredientForm from './ingredient_form.js';
-import ListItemsToggler from './collected_toggler.js';
-import IngredientListHeader from './list_header.jsx';
-import ListItemsCounter from './ListItemsCounter.jsx';
+import IngredientList from './ingredient_list';
+import IngredientForm from './ingredient_form';
+import ListItemsToggler from './collected_toggler';
+import IngredientListHeader from './list_header';
+import ListItemsCounter from './ListItemsCounter';
 
 import './App.css';
 
@@ -15,44 +15,41 @@ class App extends React.Component {
       showAll: false,
       listName: 'Edició 2018',
       ingredients: [
-        { id: 1, name: "Nous", amount: '4 unitats', collected: false },
+        { id: 1, name: 'Nous', amount: '4 unitats', collected: false },
         { id: 2, name: "Brot verd d'esbarzer", amount: '1 brot', collected: false },
-        { id: 3, name: "Fonoll", amount: '2 unitats', collected: false },
-        { id: 4, name: "Cua de cavall", amount: '1 unitat', collected: false },
-        { id: 5, name: "Sempre viva", amount: '3 unitats', collected: false },
-      ]
+        { id: 3, name: 'Fonoll', amount: '2 unitats', collected: false },
+        { id: 4, name: 'Cua de cavall', amount: '1 unitat', collected: false },
+        { id: 5, name: 'Sempre viva', amount: '3 unitats', collected: false },
+      ],
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.addIngredient = this.addIngredient.bind(this);
     this.onItemClickHandler = this.onItemClickHandler.bind(this);
     this.onListItemsTogglerClickHandler = this.onListItemsTogglerClickHandler.bind(this);
   }
 
   onItemClickHandler(id) {
-    const ingredients = this.state.ingredients.slice();
+    let { ingredients } = this.state;
+    ingredients = ingredients.slice();
+
     const clickedIngredient = ingredients.find(
-      ingredient => ingredient.id === id
+      ingredient => ingredient.id === id,
     );
     clickedIngredient.collected = !clickedIngredient.collected;
+
     this.setState({ ingredients });
   }
 
   onListItemsTogglerClickHandler() {
-    this.setState((prevState) => {
-      return { showAll: !prevState.showAll };
-    });
+    this.setState(prevState => ({ showAll: !prevState.showAll }));
   }
 
   addIngredient(name) {
-    const ingredients = this.state.ingredients.slice();
+    let { ingredients } = this.state;
+    ingredients = ingredients.slice();
     ingredients.push({ id: ingredients.length + 1, name });
 
     this.setState({ ingredients });
-  }
-
-  handleSubmit(event) {
-    event.preventDefault();
   }
 
   render() {
