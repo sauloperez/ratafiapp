@@ -1,67 +1,39 @@
 body {
   font: 16px "Fira Sans", sans-serif;
-  margin: 20px;
-}
+  margin: 20px; }
 
 ol, ul {
-  padding-left: 0;
-}
+  padding-left: 0; }
 
 h1 {
-  margin: 1.5em 0;
-}
+  margin: 1.5em 0; }
 
 .subtle {
-  color: #ccc;
-}
-
-.ingredient-list-header .title {
-  display: flex;
-  flex-direction: row;
-}
-
-.ingredient-list-header h1 {
-  margin-top: 0;
-}
-
-.ingredient-list-header p {
-  margin-bottom: 0.6em;
-}
+  color: #ccc; }
 
 .action-icon {
-  visibility: hidden;
-}
-
-.ingredient-list-header:hover .action-icon {
-  visibility: visible;
-}
+  visibility: hidden; }
 
 .ingredients-container {
   width: 480px;
-  margin: 80px auto;
-}
+  margin: 80px auto; }
 
 input {
-  font: 16px "Fira Sans", sans-serif;
-}
+  font: 16px "Fira Sans", sans-serif; }
 
 .ingredient-form input[name="name"] {
   width: 458px;
   padding: 10px;
-  border: none;
-}
+  border: none; }
 
 .disabled {
-  text-decoration: line-through;
-}
+  text-decoration: line-through; }
 
 .ingredient-list-item {
   border: 1px solid lightgrey;
   border-radius: 4px;
   padding: 10px;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 li.ingredient-list-item {
-  list-style: none;
-}
+  list-style: none; }

@@ -1,0 +1,24 @@
+.ListHeader {
+  .title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0.6em;
+  }
+
+  &:hover .ActionIcon {
+    visibility: visible;
+  }
+}
+
+.ActionIcon {
+  visibility: hidden;
+  color: lightseagreen;
+  margin: 0.7rem 0.5rem 0;
+}
