@@ -11,20 +11,8 @@ h1 {
 .subtle {
   color: #ccc; }
 
-.action-icon {
-  visibility: hidden; }
-
-.ingredients-container {
-  width: 480px;
-  margin: 80px auto; }
-
 input {
   font: 16px "Fira Sans", sans-serif; }
-
-.ingredient-form input[name="name"] {
-  width: 458px;
-  padding: 10px;
-  border: none; }
 
 .disabled {
   text-decoration: line-through; }

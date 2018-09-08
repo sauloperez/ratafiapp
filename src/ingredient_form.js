@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './IngredientForm.css';
+
 class IngredientForm extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +26,7 @@ class IngredientForm extends React.Component {
   render() {
     return (
       <form
-        className={this.props.className}
+        className="IngredientForm"
         onSubmit={this.handleSubmit}
       >
         <input
