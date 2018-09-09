@@ -1,6 +1,6 @@
 import React from 'react';
 
-import IngredientList from './ingredient_list';
+import IngredientList from './IngredientList';
 import IngredientForm from './ingredient_form';
 import ListItemsToggler from './collected_toggler';
 import IngredientListHeader from './list_header';
