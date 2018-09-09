@@ -1,7 +1,7 @@
 import React from 'react';
 
 import IngredientList from './IngredientList';
-import IngredientForm from './ingredient_form';
+import IngredientForm from './IngredientForm';
 import ListItemsToggler from './collected_toggler';
 import IngredientListHeader from './list_header';
 import ListItemsCounter from './ListItemsCounter';

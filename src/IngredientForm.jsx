@@ -7,7 +7,7 @@ class IngredientForm extends React.Component {
     super(props);
     this.state = {
       value: '',
-      placeholder: 'Hipèric'
+      placeholder: 'Hipèric',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -15,29 +15,32 @@ class IngredientForm extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
+    const { value, onIngredientSubmit } = this.state;
     event.preventDefault();
-    this.props.onIngredientSubmit(this.state.value);
+    onIngredientSubmit(value);
   }
 
   render() {
+    const { placeholder, value } = this.state;
+
     return (
       <form
         className="IngredientForm"
         onSubmit={this.handleSubmit}
       >
         <input
-          autoFocus
           name="name"
           type="text"
-          placeholder={this.state.placeholder}
-          value={this.state.value}
-          onChange={this.handleChange}/>
+          placeholder={placeholder}
+          value={value}
+          onChange={this.handleChange}
+        />
       </form>
-    )
+    );
   }
 }
 
