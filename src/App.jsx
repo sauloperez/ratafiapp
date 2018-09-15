@@ -2,7 +2,7 @@ import React from 'react';
 
 import IngredientList from './IngredientList';
 import IngredientForm from './IngredientForm';
-import ListItemsToggler from './CollectedToggler';
+import ListItemsToggler from './Toggle';
 import IngredientListHeader from './ListHeader';
 import ListItemsCounter from './ListItemsCounter';
 

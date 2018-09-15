@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class ListItemsToggler extends React.Component {
+class Toggle extends React.Component {
   constructor(props) {
     super(props);
     this.state = { enabled: true };
@@ -28,10 +28,10 @@ class ListItemsToggler extends React.Component {
   }
 }
 
-ListItemsToggler.propTypes = {
+Toggle.propTypes = {
   onLabel: PropTypes.string.isRequired,
   offLabel: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
-export default ListItemsToggler;
+export default Toggle;
