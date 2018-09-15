@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './IngredientForm.css';
 
@@ -19,7 +20,9 @@ class IngredientForm extends React.Component {
   }
 
   handleSubmit(event) {
-    const { value, onIngredientSubmit } = this.state;
+    const { value } = this.state;
+    const { onIngredientSubmit } = this.props;
+
     event.preventDefault();
     onIngredientSubmit(value);
   }
@@ -43,5 +46,7 @@ class IngredientForm extends React.Component {
     );
   }
 }
+
+IngredientForm.propTypes = { onIngredientSubmit: PropTypes.func.isRequired };
 
 export default IngredientForm;
