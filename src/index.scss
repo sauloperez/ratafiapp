@@ -1,13 +1,17 @@
+@import './variables.scss';
+
 body {
   font: 16px "Fira Sans", sans-serif;
   margin: 20px;
-  color: #828282; }
+  color: $body-color;
+}
 
 ol, ul {
   padding-left: 0; }
 
 h1, h2, h3, h4, h5 {
-  color: #0d0d0d; }
+  color: $black-color;
+}
 
 h1 {
   margin: 1.5em 0; }
@@ -17,7 +21,8 @@ h1 {
 
 input {
   font: 16px "Fira Sans", sans-serif;
-  color: #828282; }
+  color: $body-color;
+}
 
 .disabled {
   text-decoration: line-through; }

@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .ListHeader {
   .title {
     display: flex;
@@ -19,6 +21,6 @@
 
 .ActionIcon {
   visibility: hidden;
-  color: lightseagreen;
+  color: $medium-spring-green;
   margin: 0.7rem 0.5rem 0;
 }
