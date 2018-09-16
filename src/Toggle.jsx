@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import LinkButton from './LinkButton';
+
 class Toggle extends React.Component {
   constructor(props) {
     super(props);
@@ -21,9 +23,11 @@ class Toggle extends React.Component {
     const { enabled } = this.state;
 
     return (
-      <button onClick={this.onClickHandler} type="button" style={style}>
-        {enabled ? onLabel : offLabel}
-      </button>
+      <LinkButton
+        onClick={this.onClickHandler}
+        label={enabled ? onLabel : offLabel}
+        style={style}
+      />
     );
   }
 }

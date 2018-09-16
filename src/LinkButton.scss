@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.LinkButton {
+  font: $font-size $font-family, sans-serif;
+  color: $medium-spring-green;
+  background: none;
+  border: none; 
+  padding: 0;
+  cursor: pointer;
+
+  &:hover {
+    color: $medium-spring-green;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    font-weight: bold;
+    color: $cod-gray;
+  }
+}

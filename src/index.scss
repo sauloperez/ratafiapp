@@ -1,16 +1,16 @@
 @import './variables.scss';
 
 body {
-  font: 16px "Fira Sans", sans-serif;
+  font: $font-size $font-family, sans-serif;
   margin: 20px;
-  color: $body-color;
+  color: $gray;
 }
 
 ol, ul {
   padding-left: 0; }
 
 h1, h2, h3, h4, h5 {
-  color: $black-color;
+  color: $cod-gray;
 }
 
 h1 {
@@ -21,7 +21,7 @@ h1 {
 
 input {
   font: 16px "Fira Sans", sans-serif;
-  color: $body-color;
+  color: $gray;
 }
 
 .disabled {
