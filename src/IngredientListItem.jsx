@@ -11,7 +11,6 @@ class IngredientListItem extends React.Component {
     this.state = {
       name: props.name,
       editing: false,
-      value: props.name,
     };
 
     this.toggleEditing = this.toggleEditing.bind(this);
@@ -52,7 +51,9 @@ class IngredientListItem extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ value: event.target.value });
+    if (event.target.value !== '') {
+      this.setState({ name: event.target.value });
+    }
   }
 
   toggleEditing() {
@@ -61,13 +62,13 @@ class IngredientListItem extends React.Component {
 
   render() {
     let content;
-    const { editing, name, value } = this.state;
+    const { editing, name } = this.state;
     const { id, collected, amount, onClick } = this.props;
 
     if (editing) {
       content = (
         <Input
-          value={value}
+          value={name}
           onBlur={this.handleBlur}
           onKeyDown={this.handleKeyDown}
           onChange={this.handleChange}
