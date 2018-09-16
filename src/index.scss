@@ -1,5 +1,12 @@
 @import './variables.scss';
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font: $font-size $font-family, sans-serif;
   margin: 20px;
@@ -13,20 +20,5 @@ h1, h2, h3, h4, h5 {
   color: $cod-gray;
 }
 
-h1 {
-  margin: 1.5em 0; }
-
 .subtle {
   color: #ccc; }
-
-.disabled {
-  text-decoration: line-through; }
-
-.ingredient-list-item {
-  border: 1px solid lightgrey;
-  border-radius: 4px;
-  padding: 10px;
-  margin-bottom: 5px; }
-
-li.ingredient-list-item {
-  list-style: none; }

@@ -1,0 +1,19 @@
+.IngredientListItem {
+  list-style: none;
+  margin-bottom: 5px;
+
+  &--label {
+    display: inline-block;
+    line-height: 26px;
+
+    &-disabled {
+      text-decoration: line-through;
+    }
+  }
+
+  &--wrapper {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 10px;
+  }
+}

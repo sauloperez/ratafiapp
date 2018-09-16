@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ListItemForm from './ListItemForm';
+import './IngredientListItem.css';
+
+import Input from './Input';
 
 class IngredientListItem extends React.Component {
   constructor(props) {
@@ -9,21 +11,21 @@ class IngredientListItem extends React.Component {
     this.state = {
       name: props.name,
       editing: false,
+      value: props.name,
     };
 
     this.toggleEditing = this.toggleEditing.bind(this);
     this.handleBlur = this.handleBlur.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   getClassName() {
     const { collected } = this.props;
-    let className = 'ingredient-list-item';
+    let className = 'IngredientListItem IngredientListItem--label';
 
     if (collected) {
-      className += ' disabled';
-    } else {
-      className += ' enabled';
+      className += ` ${className}-disabled`;
     }
 
     return className;
@@ -49,37 +51,47 @@ class IngredientListItem extends React.Component {
     });
   }
 
+  handleChange(event) {
+    this.setState({ value: event.target.value });
+  }
+
   toggleEditing() {
     this.setState(prevState => ({ editing: !prevState.editing }));
   }
 
   render() {
-    let item;
-    const { editing, name } = this.state;
+    let content;
+    const { editing, name, value } = this.state;
     const { id, collected, amount, onClick } = this.props;
 
     if (editing) {
-      item = (
-        <ListItemForm
-          value={name}
+      content = (
+        <Input
+          value={value}
           onBlur={this.handleBlur}
           onKeyDown={this.handleKeyDown}
+          onChange={this.handleChange}
+          modifier="full"
+          style={{ height: '53px' }}
         />
       );
     } else {
-      // eslint-disable-next-line jsx-a11y/click-events-have-key-events
-      item = <span onClick={this.toggleEditing} role="button" tabIndex="-1">{name}</span>;
+      content = (
+        <div className="IngredientListItem IngredientListItem--wrapper">
+          <input
+            type="checkbox"
+            checked={collected}
+            onChange={() => onClick(id)}
+          />
+          <span className={this.getClassName()} onClick={this.toggleEditing} role="button" tabIndex="-1"> {name} </span>
+          <span style={{ float: 'right' }} className="subtle">{amount}</span>
+        </div>
+      );
     }
 
     return (
-      <li className={this.getClassName()}>
-        <input
-          type="checkbox"
-          checked={collected}
-          onChange={() => onClick(id)}
-        />
-        {item}
-        <span style={{ float: 'right' }} className="subtle">{amount}</span>
+      <li className="IngredientListItem">
+        {content}
       </li>
     );
   }
