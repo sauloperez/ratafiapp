@@ -74,6 +74,13 @@ class App extends React.Component {
           listName={listName}
           count={ingredients.length}
         />
+        <div className="ActionGroup ActionGroup--right">
+          <ListItemsToggler
+            onLabel="Show all"
+            offLabel="Hide collected"
+            onClick={this.onListItemsTogglerClickHandler}
+          />
+        </div>
         <IngredientForm
           onIngredientSubmit={this.addIngredient}
         />
@@ -82,12 +89,6 @@ class App extends React.Component {
           onClick={this.onItemClickHandler}
         />
         <ListItemsCounter count={uncollectedIngredients.length} />
-        <ListItemsToggler
-          onLabel="Show all"
-          offLabel="Hide collected"
-          style={{ float: 'right' }}
-          onClick={this.onListItemsTogglerClickHandler}
-        />
       </div>
     );
   }
