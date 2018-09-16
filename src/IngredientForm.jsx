@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './IngredientForm.css';
+import Input from './Input.jsx';
 
 class IngredientForm extends React.Component {
   constructor(props) {
@@ -35,9 +36,10 @@ class IngredientForm extends React.Component {
         className="IngredientForm"
         onSubmit={this.handleSubmit}
       >
-        <input
+        <Input
           name="name"
           type="text"
+          modifier="full"
           placeholder={placeholder}
           value={value}
           onChange={this.handleChange}

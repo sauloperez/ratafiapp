@@ -15,10 +15,6 @@ h1 {
 .subtle {
   color: #ccc; }
 
-input {
-  font: 16px "Fira Sans", sans-serif;
-  color: #828282; }
-
 .disabled {
   text-decoration: line-through; }
 

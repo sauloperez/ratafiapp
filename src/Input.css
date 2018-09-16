@@ -1,0 +1,16 @@
+.Input {
+  font: 16px "Fira Sans", sans-serif;
+  color: #828282;
+  border: 1px solid #e0e0e0;
+  background: #f9f9f9;
+  border-radius: 4px;
+  padding: 12px 15px; }
+  .Input:focus {
+    border-color: mediumspringgreen;
+    box-shadow: 0 0 3px mediumspringgreen;
+    outline: 0;
+    background-color: #ffffff; }
+  .Input::placeholder {
+    color: #e0e0e0; }
+  .Input--full {
+    width: 100%; }

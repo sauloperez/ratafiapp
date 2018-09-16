@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+.Input {
+  font: $font-size $font-family, sans-serif;
+  color: $gray;
+  border: 1px solid darken($alabaster, 10);
+  background: $alabaster;
+  border-radius: 4px;
+  padding: 12px 15px;
+
+  &:focus {
+    border-color: $medium-spring-green;
+    box-shadow: 0 0 3px opacify($medium-spring-green, 0.25);
+    outline: 0;
+    background-color: $white;
+  }
+
+  &::placeholder {
+    color: darken($alabaster, 10);
+  }
+
+  &--full {
+    width: 100%;
+  }
+}

@@ -1,22 +1,5 @@
 @import './variables.scss';
 
 .IngredientForm {
-  input[name="name"] {
-    width: 448px;
-    padding: 10px;
-    border: 1px solid darken($alabaster, 10);
-    background: $alabaster;
-    border-radius: 4px;
-    padding: 12px 15px;
-
-    &:focus {
-      border-color: $medium-spring-green;
-      box-shadow: 0 0 3px opacify($medium-spring-green, 0.25);
-      outline: 0;
-    }
-
-    &::placeholder {
-      color: darken($alabaster, 10);
-    }
-  }
+  width: 448px;
 }
