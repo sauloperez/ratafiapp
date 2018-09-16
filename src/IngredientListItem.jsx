@@ -69,6 +69,7 @@ class IngredientListItem extends React.Component {
     if (editing) {
       content = (
         <Input
+          autoFocus
           value={name}
           onBlur={this.handleBlur}
           onKeyDown={this.handleKeyDown}
@@ -86,7 +87,9 @@ class IngredientListItem extends React.Component {
             onChange={() => onClick(id)}
             style={{ marginRight: '8px' }}
           />
-          <span className={this.getClassName()} role="button" tabIndex="-1"> {name} </span>
+          <span className={this.getClassName()} role="button" tabIndex="-1">
+            {name}
+          </span>
           <Icon icon="pencil-alt" />
           <span style={{ float: 'right' }} className="subtle">{amount}</span>
         </div>
