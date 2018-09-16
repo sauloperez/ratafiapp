@@ -1,11 +1,11 @@
-.ListHeader .title {
+.ListHeader__title {
   display: flex;
   flex-direction: row; }
 
-.ListHeader h1 {
+.ListHeader__h1 {
   margin-top: 0; }
 
-.ListHeader p {
+.ListHeader__p {
   margin-bottom: 0.6em; }
 
 .ListHeader .Icon {

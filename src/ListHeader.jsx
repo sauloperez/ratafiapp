@@ -10,9 +10,9 @@ function ListHeader(props) {
 
   return (
     <header className="ListHeader">
-      <p className="subtle">{count} ingredients </p>
-      <div className="title">
-        <h1>{listName}</h1>
+      <p className="ListHeader__p subtle">{count} ingredients</p>
+      <div className="ListHeader__title">
+        <h1 className="ListHeader__h1">{listName}</h1>
         <Icon icon="pencil-alt" />
       </div>
     </header>

@@ -1,16 +1,16 @@
 @import './variables.scss';
 
 .ListHeader {
-  .title {
+  &__title {
     display: flex;
     flex-direction: row;
   }
 
-  h1 {
+  &__h1 {
     margin-top: 0;
   }
 
-  p {
+  &__p {
     margin-bottom: 0.6em;
   }
 
