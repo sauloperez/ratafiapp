@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './IngredientListItem.css';
 
 import Input from './Input';
+import Icon from './Icon';
 
 class IngredientListItem extends React.Component {
   constructor(props) {
@@ -78,14 +79,15 @@ class IngredientListItem extends React.Component {
       );
     } else {
       content = (
-        <div className="IngredientListItem--wrapper">
+        <div className="IngredientListItem--wrapper" onClick={this.toggleEditing}>
           <input
             type="checkbox"
             checked={collected}
             onChange={() => onClick(id)}
             style={{ marginRight: '8px' }}
           />
-          <span className={this.getClassName()} onClick={this.toggleEditing} role="button" tabIndex="-1"> {name} </span>
+          <span className={this.getClassName()} role="button" tabIndex="-1"> {name} </span>
+          <Icon icon="pencil-alt" />
           <span style={{ float: 'right' }} className="subtle">{amount}</span>
         </div>
       );

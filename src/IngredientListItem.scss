@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .IngredientListItem {
   list-style: none;
   margin-bottom: 5px;
@@ -15,5 +17,13 @@
     border: 1px solid lightgrey;
     border-radius: 4px;
     padding: 10px;
+  }
+
+  .Icon {
+    visibility: hidden;
+  }
+
+  &:hover .Icon {
+    visibility: visible;
   }
 }

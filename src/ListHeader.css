@@ -8,10 +8,9 @@
 .ListHeader p {
   margin-bottom: 0.6em; }
 
-.ListHeader:hover .ActionIcon {
-  visibility: visible; }
-
-.ActionIcon {
+.ListHeader .Icon {
   visibility: hidden;
-  color: mediumspringgreen;
-  margin: 0.7rem 0.5rem 0; }
+  margin-top: 0.7rem; }
+
+.ListHeader:hover .Icon {
+  visibility: visible; }

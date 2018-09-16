@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Icon from './Icon';
 
 import './ListHeader.css';
 
@@ -13,10 +13,7 @@ function ListHeader(props) {
       <p className="subtle">{count} ingredients </p>
       <div className="title">
         <h1>{listName}</h1>
-        <FontAwesomeIcon
-          icon="pencil-alt"
-          className="ActionIcon"
-        />
+        <Icon icon="pencil-alt" />
       </div>
     </header>
   );

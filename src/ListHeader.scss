@@ -14,13 +14,12 @@
     margin-bottom: 0.6em;
   }
 
-  &:hover .ActionIcon {
+  .Icon {
+    visibility: hidden;
+    margin-top: 0.7rem;
+  }
+
+  &:hover .Icon {
     visibility: visible;
   }
-}
-
-.ActionIcon {
-  visibility: hidden;
-  color: $medium-spring-green;
-  margin: 0.7rem 0.5rem 0;
 }
