@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './IngredientForm.css';
 import Input from './Input.jsx';
 
 class IngredientForm extends React.Component {
