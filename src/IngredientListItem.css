@@ -1,21 +1,16 @@
 .IngredientListItem {
   list-style: none;
   margin-bottom: 5px; }
-
-.IngredientListItem--label {
-  display: inline-block;
-  line-height: 26px; }
-
-.IngredientListItem--label-disabled {
-  text-decoration: line-through; }
-
-.IngredientListItem--wrapper {
-  border: 1px solid lightgrey;
-  border-radius: 4px;
-  padding: 10px; }
-
-.IngredientListItem .Icon {
-  visibility: hidden; }
-
-.IngredientListItem:hover .Icon {
-  visibility: visible; }
+  .IngredientListItem__label {
+    display: inline-block;
+    line-height: 26px; }
+    .IngredientListItem__label--disabled {
+      text-decoration: line-through; }
+  .IngredientListItem__wrapper {
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    padding: 10px; }
+  .IngredientListItem .Icon {
+    visibility: hidden; }
+  .IngredientListItem:hover .Icon {
+    visibility: visible; }

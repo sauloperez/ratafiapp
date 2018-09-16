@@ -22,10 +22,10 @@ class IngredientListItem extends React.Component {
 
   getClassName() {
     const { collected } = this.props;
-    let className = 'IngredientListItem--label';
+    let className = 'IngredientListItem__label';
 
     if (collected) {
-      className += ` ${className}-disabled`;
+      className += ` ${className}--disabled`;
     }
 
     return className;
@@ -80,7 +80,7 @@ class IngredientListItem extends React.Component {
       );
     } else {
       content = (
-        <div className="IngredientListItem--wrapper" onClick={this.toggleEditing}>
+        <div className="IngredientListItem__wrapper" onClick={this.toggleEditing}>
           <input
             type="checkbox"
             checked={collected}
