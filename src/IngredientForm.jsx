@@ -8,7 +8,7 @@ class IngredientForm extends React.Component {
     super(props);
     this.state = {
       value: '',
-      placeholder: 'Hipèric',
+      placeholder: 'Afegeix ingredient',
     };
 
     this.handleChange = this.handleChange.bind(this);
