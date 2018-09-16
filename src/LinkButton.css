@@ -5,13 +5,10 @@
   border: none;
   padding: 0;
   cursor: pointer; }
-
-.LinkButton:hover {
-  color: mediumspringgreen; }
-
-.LinkButton:focus {
-  outline: none; }
-
-.LinkButton--active {
-  font-weight: bold;
-  color: #0d0d0d; }
+  .LinkButton:hover {
+    color: mediumspringgreen; }
+  .LinkButton:focus {
+    outline: none; }
+  .LinkButton--active {
+    font-weight: bold;
+    color: #0d0d0d; }
