@@ -22,10 +22,15 @@ class IngredientListItem extends React.Component {
 
   getClassName() {
     const { collected } = this.props;
-    let className = 'IngredientListItem__label';
+    const { editing } = this.state;
+    let className = 'Input';
 
     if (collected) {
-      className += ` ${className}--disabled`;
+      className += ' Input--disabled';
+    }
+
+    if (!editing) {
+      className += ' Input--hidden';
     }
 
     return className;
@@ -62,43 +67,27 @@ class IngredientListItem extends React.Component {
   }
 
   render() {
-    let content;
-    const { editing, name } = this.state;
+    const { name } = this.state;
     const { id, collected, amount, onClick } = this.props;
 
-    if (editing) {
-      content = (
-        <Input
-          autoFocus
-          value={name}
-          onBlur={this.handleBlur}
-          onKeyDown={this.handleKeyDown}
-          onChange={this.handleChange}
-          modifier="full"
-          style={{ height: '53px' }}
-        />
-      );
-    } else {
-      content = (
+    return (
+      <li className="IngredientListItem">
         <div className="IngredientListItem__wrapper" onClick={this.toggleEditing}>
           <input
             type="checkbox"
             checked={collected}
             onChange={() => onClick(id)}
-            style={{ marginRight: '8px' }}
           />
-          <span className={this.getClassName()} role="button" tabIndex="-1">
-            {name}
-          </span>
+          <Input
+            className={this.getClassName()}
+            value={name}
+            onBlur={this.handleBlur}
+            onKeyDown={this.handleKeyDown}
+            onChange={this.handleChange}
+          />
           <Icon icon="pencil-alt" />
-          <span style={{ float: 'right' }} className="subtle">{amount}</span>
+          <span style={{ float: 'right', padding: '12px 0' }} className="subtle">{amount}</span>
         </div>
-      );
-    }
-
-    return (
-      <li className="IngredientListItem">
-        {content}
       </li>
     );
   }

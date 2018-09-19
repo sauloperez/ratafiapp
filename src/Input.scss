@@ -22,4 +22,14 @@
   &--full {
     width: 100%;
   }
+
+  &--hidden {
+    border: 1px solid transparent;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  &--disabled {
+    text-decoration: line-through;
+  }
 }
