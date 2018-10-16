@@ -7,7 +7,9 @@ import Avatar from './Avatar';
 function Navbar(props) {
   return (
     <nav className="Navbar">
-      <Avatar />
+      <div className="Navbar__wrapper">
+        <Avatar />
+      </div>
     </nav>
   );
 }

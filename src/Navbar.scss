@@ -1,4 +1,13 @@
+@import './variables.scss';
+
 .Navbar {
-  display: flex;
-  flex-direction: row-reverse;
+  height: 70px;
+  border-bottom: 1px solid $alto;
+
+  &__wrapper {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
