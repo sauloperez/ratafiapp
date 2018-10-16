@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from './Icon';
+import ActionIcon from './ActionIcon';
 
 import './ListHeader.css';
 
@@ -13,7 +13,7 @@ function ListHeader(props) {
       <p className="ListHeader__p subtle">{count} ingredients</p>
       <div className="ListHeader__title">
         <h1 className="ListHeader__h1">{listName}</h1>
-        <Icon icon="pencil-alt" />
+        <ActionIcon icon="pencil-alt" />
       </div>
     </header>
   );

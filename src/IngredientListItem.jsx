@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './IngredientListItem.css';
 
 import Input from './Input';
-import Icon from './Icon';
+import ActionIcon from './ActionIcon';
 
 class IngredientListItem extends React.Component {
   constructor(props) {
@@ -85,7 +85,7 @@ class IngredientListItem extends React.Component {
             onKeyDown={this.handleKeyDown}
             onChange={this.handleChange}
           />
-          <Icon icon="pencil-alt" />
+          <ActionIcon icon="pencil-alt" />
           <span style={{ float: 'right', padding: '12px 0' }} className="subtle">{amount}</span>
         </div>
       </li>
