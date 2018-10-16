@@ -5,7 +5,7 @@ import IngredientForm from './IngredientForm';
 import ListItemsToggler from './Toggle';
 import IngredientListHeader from './ListHeader';
 import ListItemsCounter from './ListItemsCounter';
-import Avatar from './Avatar';
+import Navbar from './Navbar';
 
 import './App.css';
 
@@ -71,7 +71,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <Avatar />
+        <Navbar />
         <div className="IngredientsContainer">
           <IngredientListHeader
             listName={listName}
