@@ -3,7 +3,7 @@
 .Input {
   font: $font-size $font-family, sans-serif;
   color: $gray;
-  border: 1px solid darken($alabaster, 10);
+  border: 1px solid $alto;
   background: $alabaster;
   border-radius: 4px;
   padding: 12px 15px;
