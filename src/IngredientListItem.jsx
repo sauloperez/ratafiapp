@@ -86,7 +86,7 @@ class IngredientListItem extends React.Component {
             onChange={this.handleChange}
           />
           <ActionIcon icon="pencil-alt" />
-          <span style={{ float: 'right', padding: '12px 0' }} className="subtle">{amount}</span>
+          <span style={{ float: 'right', padding: '12px 0' }} className="IngredientListItem__metadata">{amount}</span>
         </div>
       </li>
     );

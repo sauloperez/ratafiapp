@@ -1,10 +1,12 @@
 import React from 'react';
 
+import './ListItemsCounter.css'
+
 function ListItemsCounter(props) {
   const { count } = props;
 
   return (
-    <span className="subtle">{count} left </span>
+    <span className="ListItemsCounter">{count} left </span>
   );
 }
 

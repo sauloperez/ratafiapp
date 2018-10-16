@@ -10,7 +10,7 @@ function ListHeader(props) {
 
   return (
     <header className="ListHeader">
-      <p className="ListHeader__p subtle">{count} ingredients</p>
+      <p className="ListHeader__p">{count} ingredients</p>
       <div className="ListHeader__title">
         <h1 className="ListHeader__h1">{listName}</h1>
         <ActionIcon icon="pencil-alt" />

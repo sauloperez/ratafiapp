@@ -6,7 +6,8 @@
   margin-top: 0; }
 
 .ListHeader__p {
-  margin-bottom: 0.6em; }
+  margin-bottom: 0.6em;
+  color: #ccc; }
 
 .ListHeader .Icon {
   visibility: hidden;
