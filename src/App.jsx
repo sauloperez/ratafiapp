@@ -5,6 +5,7 @@ import IngredientForm from './IngredientForm';
 import ListItemsToggler from './Toggle';
 import IngredientListHeader from './ListHeader';
 import ListItemsCounter from './ListItemsCounter';
+import Avatar from './Avatar';
 
 import './App.css';
 
@@ -69,26 +70,29 @@ class App extends React.Component {
     );
 
     return (
-      <div className="IngredientsContainer">
-        <IngredientListHeader
-          listName={listName}
-          count={ingredients.length}
-        />
-        <div className="ActionGroup ActionGroup--right">
-          <ListItemsToggler
-            onLabel="Show all"
-            offLabel="Hide collected"
-            onClick={this.onListItemsTogglerClickHandler}
+      <div>
+        <Avatar />
+        <div className="IngredientsContainer">
+          <IngredientListHeader
+            listName={listName}
+            count={ingredients.length}
           />
+          <div className="ActionGroup ActionGroup--right">
+            <ListItemsToggler
+              onLabel="Show all"
+              offLabel="Hide collected"
+              onClick={this.onListItemsTogglerClickHandler}
+            />
+          </div>
+          <IngredientForm
+            onIngredientSubmit={this.addIngredient}
+          />
+          <IngredientList
+            ingredients={shownIngredients}
+            onClick={this.onItemClickHandler}
+          />
+          <ListItemsCounter count={uncollectedIngredients.length} />
         </div>
-        <IngredientForm
-          onIngredientSubmit={this.addIngredient}
-        />
-        <IngredientList
-          ingredients={shownIngredients}
-          onClick={this.onItemClickHandler}
-        />
-        <ListItemsCounter count={uncollectedIngredients.length} />
       </div>
     );
   }

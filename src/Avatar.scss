@@ -1,0 +1,12 @@
+.Avatar {
+  display: flex;
+  align-items: center;
+
+  .Avatar__picture {
+    border-radius: 50%;
+  }
+
+  .fa-chevron-down {
+    width: 0.67em;
+  }
+}
