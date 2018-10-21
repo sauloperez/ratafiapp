@@ -6,6 +6,7 @@ import ListItemsToggler from './Toggle';
 import IngredientListHeader from './ListHeader';
 import ListItemsCounter from './ListItemsCounter';
 import Navbar from './Navbar';
+import Sidebar from './Sidebar';
 
 import './App.css';
 
@@ -72,6 +73,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
+        <Sidebar />
         <div className="IngredientsContainer">
           <IngredientListHeader
             listName={listName}
