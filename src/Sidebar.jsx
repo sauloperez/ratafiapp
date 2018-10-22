@@ -1,26 +1,43 @@
 import React from 'react';
 
+import './SidebarItem.css';
+
 import Icon from './Icon';
+import ActionIcon from './ActionIcon';
 import Pane from './Pane';
 
-function Sidebar(props) {
-  const items = [
-    { id: 1, name: 'Receptes' }
-  ];
+function SidebarItem(props) {
+  const { item } = props;
+  const { name, icon, active } = item;
 
-  function SidebarItem(props) {
-    return (
-      <li>
-        <Icon icon="book" />
-        {props.item.name}
-      </li>
-    );
+  function getClassName() {
+    let className = "SidebarItem";
+
+    if (active) {
+      className += " SidebarItem--active";
+    }
+
+    return className;
   }
 
   return (
-    <Pane width="240px">
+    <li className={getClassName()}>
+      { active ? <ActionIcon icon={icon} /> : <Icon icon={icon} /> }
+      <a className="SidebarItem__link" href="#">{name}</a>
+    </li>
+  );
+}
+
+function Sidebar(props) {
+  const { items } = props;
+
+  return (
+    <Pane
+      width="240px"
+      className="Sidebar"
+    >
       <ul>
-        {items.map((item) => <SidebarItem key={item.id} item={item} />)}
+        {items.map(item => <SidebarItem key={item.id} item={item} />)}
       </ul>
     </Pane>
   );

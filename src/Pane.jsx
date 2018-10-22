@@ -3,7 +3,7 @@ import React from 'react';
 function Pane(props) {
   return (
     <div
-      className="Pane"
+      className={props.className}
       style={{ width: props.width }}>
       {props.children}
     </div>

@@ -16,6 +16,11 @@ class App extends React.Component {
     this.state = {
       showAll: false,
       listName: 'Edició 2018',
+      items: [
+        { id: 1, name: 'Receptes', icon: 'book', active: true },
+        { id: 2, name: 'Magatzem', icon: 'warehouse', active: false },
+        { id: 3, name: 'Calculadora', icon: 'calculator', active: false },
+      ],
       ingredients: [
         { id: 1, name: 'Nous', amount: '4 unitats', collected: false },
         { id: 2, name: "Brot verd d'esbarzer", amount: '1 brot', collected: false },
@@ -55,7 +60,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { showAll, ingredients, listName } = this.state;
+    const { showAll, ingredients, listName, items } = this.state;
     let shownIngredients;
 
     if (showAll) {
@@ -73,7 +78,7 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
-        <Sidebar />
+        <Sidebar items={items} />
         <div className="IngredientsContainer">
           <IngredientListHeader
             listName={listName}

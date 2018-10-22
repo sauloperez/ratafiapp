@@ -14,8 +14,14 @@ body {
 }
 
 ol, ul {
-  padding-left: 0; }
+  padding-left: 0;
+  list-style: none;
+}
 
 h1, h2, h3, h4, h5 {
   color: $cod-gray;
+}
+
+a {
+  text-decoration: none;
 }
