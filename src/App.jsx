@@ -7,6 +7,7 @@ import IngredientListHeader from './ListHeader';
 import ListItemsCounter from './ListItemsCounter';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import Pane from './Pane';
 
 import './App.css';
 
@@ -79,27 +80,29 @@ class App extends React.Component {
       <div>
         <Navbar />
         <Sidebar items={items} />
-        <div className="IngredientsContainer">
-          <IngredientListHeader
-            listName={listName}
-            count={ingredients.length}
-          />
-          <div className="ActionGroup ActionGroup--right">
-            <ListItemsToggler
-              onLabel="Show all"
-              offLabel="Hide collected"
-              onClick={this.onListItemsTogglerClickHandler}
+        <Pane className="Main">
+          <div className="IngredientsContainer">
+            <IngredientListHeader
+              listName={listName}
+              count={ingredients.length}
             />
+            <div className="ActionGroup ActionGroup--right">
+              <ListItemsToggler
+                onLabel="Show all"
+                offLabel="Hide collected"
+                onClick={this.onListItemsTogglerClickHandler}
+              />
+            </div>
+            <IngredientForm
+              onIngredientSubmit={this.addIngredient}
+            />
+            <IngredientList
+              ingredients={shownIngredients}
+              onClick={this.onItemClickHandler}
+            />
+            <ListItemsCounter count={uncollectedIngredients.length} />
           </div>
-          <IngredientForm
-            onIngredientSubmit={this.addIngredient}
-          />
-          <IngredientList
-            ingredients={shownIngredients}
-            onClick={this.onItemClickHandler}
-          />
-          <ListItemsCounter count={uncollectedIngredients.length} />
-        </div>
+        </Pane>
       </div>
     );
   }

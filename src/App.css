@@ -1,9 +1,13 @@
 .IngredientsContainer {
   width: 480px;
-  margin: 80px auto; }
+  margin: 0 auto; }
 
 .ActionGroup {
   margin: 1rem 0;
   display: flex; }
-  .ActionGroup--right {
-    flex-direction: row-reverse; }
+
+.ActionGroup--right {
+  flex-direction: row-reverse; }
+
+.Main {
+  padding: 20px 0 0 240px; }
