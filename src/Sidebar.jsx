@@ -6,26 +6,45 @@ import Icon from './Icon';
 import ActionIcon from './ActionIcon';
 import Pane from './Pane';
 
-function SidebarItem(props) {
-  const { item } = props;
-  const { name, icon, active } = item;
+class SidebarItem extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { active: props.item.active }
+  }
 
-  function getClassName() {
-    let className = "SidebarItem";
+  getClassName() {
+    let className = 'SidebarItem';
+    const { active } = this.state;
 
     if (active) {
-      className += " SidebarItem--active";
+      className += ' SidebarItem--active';
     }
 
     return className;
   }
 
-  return (
-    <li className={getClassName()}>
-      { active ? <ActionIcon icon={icon} /> : <Icon icon={icon} /> }
-      <a className="SidebarItem__link" href="#">{name}</a>
-    </li>
-  );
+  getLinkClassName() {
+    let className = 'SidebarItem__link';
+    const { active } = this.state;
+
+    if (active) {
+      className += ' SidebarItem__link--active';
+    }
+
+    return className;
+  }
+
+  render() {
+    const { item } = this.props;
+    const { name, icon } = item;
+
+    return (
+      <li className={this.getClassName()}>
+        { this.state.active ? <ActionIcon icon={icon} /> : <Icon icon={icon} /> }
+        <a className={this.getLinkClassName()} href="#">{name}</a>
+      </li>
+    );
+  }
 }
 
 function Sidebar(props) {
