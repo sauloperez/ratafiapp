@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 .Navbar {
-  height: 70px;
+  height: $navbar-height;
   border-bottom: 1px solid $alto;
 
   &__wrapper {

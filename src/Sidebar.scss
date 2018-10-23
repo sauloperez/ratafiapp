@@ -1,0 +1,10 @@
+@import './variables.scss';
+
+.Sidebar {
+  position: fixed;
+  top: $navbar-height;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  border-right: 1px solid $alto;
+}

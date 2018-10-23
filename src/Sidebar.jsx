@@ -1,6 +1,7 @@
 import React from 'react';
 
 import './SidebarItem.css';
+import './Sidebar.css';
 
 import Icon from './Icon';
 import ActionIcon from './ActionIcon';
@@ -51,10 +52,7 @@ function Sidebar(props) {
   const { items } = props;
 
   return (
-    <Pane
-      width="240px"
-      className="Sidebar"
-    >
+    <Pane className="Sidebar">
       <ul>
         {items.map(item => <SidebarItem key={item.id} item={item} />)}
       </ul>

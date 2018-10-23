@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.SidebarItem {
+  padding: 10px;
+  margin: 10px 0;
+
+  .Icon {
+    color: $silver;
+  }
+
+  &__link {
+    color: $gray;
+  }
+
+  &--active {
+    border-left: 4px solid $medium-spring-green;
+    background-color: rgba(0,0,0,.02);
+  }
+
+  &:hover {
+    background-color: rgba(0,0,0,.05);
+  }
+}
