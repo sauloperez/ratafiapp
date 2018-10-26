@@ -4,7 +4,6 @@ import './SidebarItem.css';
 import './Sidebar.css';
 
 import Icon from './Icon';
-import ActionIcon from './ActionIcon';
 import Pane from './Pane';
 
 class SidebarItem extends React.Component {
@@ -28,10 +27,6 @@ class SidebarItem extends React.Component {
     let className = 'SidebarItem__link';
     const { active } = this.state;
 
-    if (active) {
-      className += ' SidebarItem__link--active';
-    }
-
     return className;
   }
 
@@ -41,7 +36,6 @@ class SidebarItem extends React.Component {
 
     return (
       <li className={this.getClassName()}>
-        { this.state.active ? <ActionIcon icon={icon} /> : <Icon icon={icon} /> }
         <a className={this.getLinkClassName()} href="#">{name}</a>
       </li>
     );
