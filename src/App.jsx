@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Pane from './Pane';
 import Recipie from './Recipie';
+import Store from './Store';
 
 import './App.css';
 
@@ -54,11 +55,7 @@ class App extends React.Component {
               key="1"
               path="/store"
               exact
-              render={() => (
-                <header>
-                  <h1>Magatzem</h1>
-                </header>
-              )}
+              component={Store}
             />
           </Pane>
         </div>
