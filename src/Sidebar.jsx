@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './SidebarItem.css';
 import './Sidebar.css';
 
-import Icon from './Icon';
 import Pane from './Pane';
 
 class SidebarItem extends React.Component {
