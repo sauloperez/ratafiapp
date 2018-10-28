@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Pane from './Pane';
-import Recipie from './Recipie';
+import Recipies from './Recipies';
 import Store from './Store';
 
 import './App.css';
@@ -49,7 +49,7 @@ class App extends React.Component {
               key="0"
               path="/recipies"
               exact
-              component={Recipie}
+              component={Recipies}
             />
             <Route
               key="1"

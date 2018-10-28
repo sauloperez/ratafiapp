@@ -1,0 +1,16 @@
+@import './variables.scss';
+
+.Card {
+  border-radius: $border-radius;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  width: 240px;
+  border: 1px solid $alto;
+}
+
+.CardList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
