@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import './SidebarItem.css';
 import './Sidebar.css';
@@ -32,11 +33,11 @@ class SidebarItem extends React.Component {
 
   render() {
     const { item } = this.props;
-    const { name, icon } = item;
+    const { name, icon, path } = item;
 
     return (
       <li className={this.getClassName()}>
-        <a className={this.getLinkClassName()} href="#">{name}</a>
+        <Link to={path} className={this.getLinkClassName()}>{name}</Link>
       </li>
     );
   }
