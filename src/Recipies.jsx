@@ -53,8 +53,10 @@ class Recipies extends React.Component {
         <CardList>
           {recipies.map(recipie => (
             <div className="Card" key={recipie.id}>
-              <h3>{recipie.name}</h3>
-              {recipie.numIngredients > 0 && <p>{recipie.numIngredients} ingredients</p>}
+              <Link to={`/recipies/${recipie.id}`}>
+                <h3>{recipie.name}</h3>
+                {recipie.numIngredients > 0 && <p>{recipie.numIngredients} ingredients</p>}
+              </Link>
             </div>
           ))}
         </CardList>

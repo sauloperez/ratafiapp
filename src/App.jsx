@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Pane from './Pane';
 import Recipies from './Recipies';
+import Recipie from './Recipie';
 import Store from './Store';
 
 import './App.css';
@@ -56,6 +57,12 @@ class App extends React.Component {
               path="/store"
               exact
               component={Store}
+            />
+            <Route
+              key="2"
+              path="/recipies/:recipieId"
+              exact
+              component={Recipie}
             />
           </Pane>
         </div>
