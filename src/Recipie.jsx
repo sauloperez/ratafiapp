@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import IngredientList from './IngredientList';
 import IngredientForm from './IngredientForm';
 import ListItemsToggler from './Toggle';
 import ListItemsCounter from './ListItemsCounter';
 import IngredientListHeader from './ListHeader';
+import Icon from './Icon';
+
+import './Recipie.css';
 
 class Recipie extends React.Component {
   constructor(props) {
@@ -70,6 +74,13 @@ class Recipie extends React.Component {
     return (
       <div>
         <div className="IngredientsContainer">
+          <nav className="Recipie__nav">
+            <Link to="/recipies" >
+              <Icon icon="arrow-left" />
+              Torna a receptes
+            </Link>
+          </nav>
+
           <IngredientListHeader
             listName={listName}
             count={ingredients.length}
