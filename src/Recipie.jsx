@@ -39,16 +39,16 @@ class Recipie extends React.Component {
     this.setState({ ingredients });
   }
 
+  onListItemsTogglerClickHandler() {
+    this.setState(prevState => ({ showAll: !prevState.showAll }));
+  }
+
   addIngredient(name) {
     let { ingredients } = this.state;
     ingredients = ingredients.slice();
     ingredients.push({ id: ingredients.length + 1, name });
 
     this.setState({ ingredients });
-  }
-
-  onListItemsTogglerClickHandler() {
-    this.setState(prevState => ({ showAll: !prevState.showAll }));
   }
 
   render() {
