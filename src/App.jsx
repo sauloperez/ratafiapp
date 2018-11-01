@@ -7,6 +7,7 @@ import Pane from './Pane';
 import Recipies from './Recipies';
 import Recipie from './Recipie';
 import Store from './Store';
+import Home from './Home';
 
 import './App.css';
 
@@ -48,18 +49,24 @@ class App extends React.Component {
           <Pane className="Main">
             <Route
               key="0"
+              path="/"
+              exact
+              component={Home}
+            />
+            <Route
+              key="1"
               path="/recipies"
               exact
               component={Recipies}
             />
             <Route
-              key="1"
+              key="2"
               path="/store"
               exact
               component={Store}
             />
             <Route
-              key="2"
+              key="3"
               path="/recipies/:recipieId"
               exact
               component={Recipie}
