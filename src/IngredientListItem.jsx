@@ -15,7 +15,6 @@ class IngredientListItem extends React.Component {
     };
 
     this.toggleEditing = this.toggleEditing.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -40,20 +39,8 @@ class IngredientListItem extends React.Component {
     const ENTER_KEY = 13;
 
     if (event.which === ENTER_KEY) {
-      this.setState({
-        editing: false,
-        name: event.target.value,
-      });
+      this.setState({ editing: false });
     }
-  }
-
-  handleBlur() {
-    const { name } = this.props;
-
-    this.setState({
-      editing: false,
-      name,
-    });
   }
 
   handleChange(event) {
@@ -81,7 +68,6 @@ class IngredientListItem extends React.Component {
           <Input
             className={this.getClassName()}
             value={name}
-            onBlur={this.handleBlur}
             onKeyDown={this.handleKeyDown}
             onChange={this.handleChange}
           />
