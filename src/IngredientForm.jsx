@@ -25,6 +25,8 @@ class IngredientForm extends React.Component {
 
     event.preventDefault();
     onIngredientSubmit(value);
+
+    this.setState({ value: '' });
   }
 
   render() {
