@@ -4,7 +4,7 @@
   font: $font-size $font-family, sans-serif;
   color: $gray;
   border: 1px solid $alto;
-  background: $alabaster;
+  background: $gray-100;
   border-radius: 4px;
   padding: 12px 15px;
 
@@ -16,7 +16,7 @@
   }
 
   &::placeholder {
-    color: darken($alabaster, 10);
+    color: $alto;
   }
 
   &--full {
