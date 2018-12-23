@@ -9,15 +9,15 @@ function StoreItem(props) {
   return (
     <tr>
       <td>
-        {name}
-        {createdAt}
+        <div>{name}</div>
+        <div className="note">{createdAt}</div>
       </td>
-      <td>{graduation}°</td>
+      <td>{graduation}</td>
       <td>
-        {quantity}
-        {lastConsumedAt.toLocaleDateString('es')}
+        <div>{quantity}</div>
+        <div className="note">{lastConsumedAt}</div>
       </td>
-      <td>...</td>
+      <td><span className="EllipsisButton">...</span></td>
     </tr>
   );
 }
@@ -25,9 +25,9 @@ function StoreItem(props) {
 StoreItem.propTypes = {
   name: PropTypes.string.isRequired,
   createdAt: PropTypes.number.isRequired,
-  graduation: PropTypes.number.isRequired,
+  graduation: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
-  lastConsumedAt: PropTypes.instanceOf(Date).isRequired,
+  lastConsumedAt: PropTypes.string.isRequired,
 };
 
 export default StoreItem;
