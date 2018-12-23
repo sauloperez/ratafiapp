@@ -40,18 +40,17 @@ class Store extends React.Component {
           <header>
             <h1>Magatzem</h1>
             <table>
-              <thead>
+              <tbody>
                 <tr>
                   <th>Nom</th>
                   <th>Graduació</th>
                   <th>Quantitat</th>
-                  <th>action</th>
+                  <th></th>
                 </tr>
-              </thead>
-              <tbody>
+
                 {inventoryItems.map(
                   inventoryItem => (
-                    <StoreItem 
+                    <StoreItem
                       key={inventoryItem.id}
                       {...inventoryItem}
                     />

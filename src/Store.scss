@@ -1,7 +1,43 @@
 @import './variables.scss';
 
 .Store {
+  background-color: $white;
+  border-radius: $border-radius;
+
+  table {
+    border: 1px solid $gray-200;
+    table-layout: fixed;
+  }
+
   h1 {
     font-size: 24px;
+    color: $gray-900;
+  }
+
+  tr {
+    display: block;
+    padding: 24px;
+    border-bottom: 1px solid $gray-200;
+  }
+
+  th {
+    text-transform: uppercase;
+    color: $gray-600;
+    font-weight: 500;
+    text-align: left;
+    width: 192px;
+
+    &:last-child {
+      width: 16px;
+    }
+  }
+
+  td {
+    color: $gray-900;
+    width: 192px;
+
+    &:last-child {
+      width: 16px;
+    }
   }
 }

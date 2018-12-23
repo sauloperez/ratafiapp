@@ -3,29 +3,23 @@ import PropTypes from 'prop-types';
 
 import './StoreItem.css';
 
-class StoreItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+function StoreItem(props) {
+  const { name, createdAt, graduation, quantity, lastConsumedAt } = props;
 
-  render() {
-    const { name, createdAt, graduation, quantity, lastConsumedAt } = this.props;
-
-    return (
-      <tr>
-        <td>
-          {name}
-          {createdAt}
-        </td>
-        <td>{graduation}</td>
-        <td>
-          {quantity}
-          {lastConsumedAt.toLocaleDateString('es')}
-        </td>
-        <td>action</td>
-      </tr>
-    );
-  }
+  return (
+    <tr>
+      <td>
+        {name}
+        {createdAt}
+      </td>
+      <td>{graduation}°</td>
+      <td>
+        {quantity}
+        {lastConsumedAt.toLocaleDateString('es')}
+      </td>
+      <td>...</td>
+    </tr>
+  );
 }
 
 StoreItem.propTypes = {
