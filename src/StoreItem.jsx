@@ -33,7 +33,7 @@ StoreItem.propTypes = {
   createdAt: PropTypes.number.isRequired,
   graduation: PropTypes.number.isRequired,
   quantity: PropTypes.number.isRequired,
-  lastConsumedAt: PropTypes.object.isRequired,
+  lastConsumedAt: PropTypes.instanceOf(Date).isRequired,
 };
 
 export default StoreItem;
