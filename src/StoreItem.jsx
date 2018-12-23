@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import EllipsisButton from './EllipsisButton';
+
 import './StoreItem.css';
 
 function StoreItem(props) {
@@ -17,7 +19,7 @@ function StoreItem(props) {
         <div>{quantity}</div>
         <div className="note">{lastConsumedAt}</div>
       </td>
-      <td><span className="EllipsisButton">...</span></td>
+      <td><EllipsisButton /></td>
     </tr>
   );
 }

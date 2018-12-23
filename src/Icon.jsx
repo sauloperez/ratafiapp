@@ -11,7 +11,7 @@ function Icon(props) {
   return (
     <FontAwesomeIcon
       icon={icon}
-      className="Icon"
+      {...props}
     />
   );
 }
