@@ -9,6 +9,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "i": "^0.3.6",
     "micro": "^9.3.3",
+    "moment": "^2.23.0",
     "npm": "^6.4.1",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",

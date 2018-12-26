@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'moment';
 
 import Body from './Body';
 import StoreItem from './StoreItem';
@@ -8,6 +9,7 @@ import './Store.css';
 class Store extends React.Component {
   constructor(props) {
     super(props);
+    Moment.locale('ca');
 
     this.state = {
       inventoryItems: [
@@ -17,7 +19,7 @@ class Store extends React.Component {
           createdAt: 2018,
           graduation: '25°',
           quantity: 10,
-          lastConsumedAt: new Date(2018, 11, 3).toLocaleDateString('es'),
+          lastConsumedAt: new Date(2018, 11, 3),
         },
         {
           id: 2,
@@ -25,7 +27,7 @@ class Store extends React.Component {
           createdAt: 2018,
           graduation: '30°',
           quantity: 5,
-          lastConsumedAt: new Date(2018, 11, 1).toLocaleDateString('es'),
+          lastConsumedAt: new Date(2018, 11, 1),
         },
       ],
     };

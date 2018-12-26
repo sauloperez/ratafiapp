@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Moment from 'moment';
 
 import EllipsisButton from './EllipsisButton';
 
@@ -17,7 +18,7 @@ function StoreItem(props) {
       <td>{graduation}</td>
       <td>
         <div>{quantity}</div>
-        <div className="note">{lastConsumedAt}</div>
+        <div className="note">{Moment(lastConsumedAt).fromNow()}</div>
       </td>
       <td><EllipsisButton /></td>
     </tr>
@@ -29,7 +30,7 @@ StoreItem.propTypes = {
   createdAt: PropTypes.number.isRequired,
   graduation: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
-  lastConsumedAt: PropTypes.string.isRequired,
+  lastConsumedAt: PropTypes.object.isRequired,
 };
 
 export default StoreItem;
