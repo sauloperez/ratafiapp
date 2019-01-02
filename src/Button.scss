@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+.Button {
+  background-color: $brand-700;
+  border-radius: $border-radius;
+  color: $white;
+  font-size: 14px;
+  padding: 8px 12px;
+  border: none;
+  display: inline-block;
+}

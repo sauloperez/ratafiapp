@@ -3,6 +3,7 @@ import Moment from 'moment';
 
 import Body from './Body';
 import StoreItem from './StoreItem';
+import Button from './Button';
 
 import './Store.css';
 
@@ -41,6 +42,7 @@ class Store extends React.Component {
         <Body>
           <header>
             <h1>Magatzem</h1>
+            <Button label="Afegir" />
             <table>
               <tbody>
                 <tr>
