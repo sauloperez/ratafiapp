@@ -42,7 +42,7 @@ class Store extends React.Component {
         <Body>
           <header>
             <h1>Magatzem</h1>
-            <Button label="Afegir" />
+            <Button label="Afegir estoc" />
             <table>
               <tbody>
                 <tr>
