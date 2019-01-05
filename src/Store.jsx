@@ -41,8 +41,12 @@ class Store extends React.Component {
       <div className="Store">
         <Body>
           <header>
-            <h1>Magatzem</h1>
-            <Button label="Afegir estoc" />
+            <div className="ButtonBar">
+              <h2>Magatzem</h2>
+              <div className="ButtonBar__ButtonSection">
+                <Button icon label="Afegir estoc" />
+              </div>
+            </div>
             <table>
               <tbody>
                 <tr>

@@ -53,3 +53,16 @@
     color: $gray-500;
   }
 }
+
+.ButtonBar {
+  margin-bottom: 24px;
+  display: flex;
+
+  h2 {
+    margin: 0;
+  }
+
+  &__ButtonSection {
+    margin-left: auto;
+  }
+}
