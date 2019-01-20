@@ -47,26 +47,26 @@ class Store extends React.Component {
                 <Button label="Afegir estoc" />
               </div>
             </div>
-            <table>
-              <tbody>
-                <tr>
-                  <th>Nom</th>
-                  <th>Graduació</th>
-                  <th>Quantitat</th>
-                  <th></th>
-                </tr>
-
-                {inventoryItems.map(
-                  inventoryItem => (
-                    <StoreItem
-                      key={inventoryItem.id}
-                      {...inventoryItem}
-                    />
-                  ),
-                )}
-              </tbody>
-            </table>
           </header>
+          <table>
+            <tbody>
+              <tr>
+                <th>Nom</th>
+                <th>Graduació</th>
+                <th>Quantitat</th>
+                <th></th>
+              </tr>
+
+              {inventoryItems.map(
+                inventoryItem => (
+                  <StoreItem
+                    key={inventoryItem.id}
+                    {...inventoryItem}
+                  />
+                ),
+              )}
+            </tbody>
+          </table>
         </Body>
       </div>
     );
