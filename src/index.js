@@ -10,11 +10,12 @@ import {
   faArrowLeft,
   faEllipsisH,
   faPlus,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
 import App from './App';
 
-library.add(faPencilAlt, faChevronDown, faArrowLeft, faEllipsisH, faPlus);
+library.add(faPencilAlt, faChevronDown, faArrowLeft, faEllipsisH, faPlus, faTimes);
 
 // ========================================
 
