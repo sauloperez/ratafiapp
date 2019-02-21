@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import Icon from './Icon';
+import IconButton from './IconButton';
 
 import './Modal.css';
 
@@ -10,14 +11,15 @@ class Modal extends React.Component {
   }
 
   render() {
-    const { title, children, button } = this.props;
+    const { title, children, button, onClose } = this.props;
 
     return (
       <div className="Modal__Backdrop">
         <div className="Modal" style={{ position: 'relative' }}>
-          <Icon
+          <IconButton
             icon="times"
             className="Icon Icon--close"
+            onClick={onClose}
             style={{ position: 'absolute', top: '16px', right: '8px' }}
           />
           <header className="Modal__Header">
@@ -34,5 +36,14 @@ class Modal extends React.Component {
     );
   }
 }
+
+Modal.defaultProps = { title: '' };
+
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  title: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  button: PropTypes.element.isRequired,
+};
 
 export default Modal;

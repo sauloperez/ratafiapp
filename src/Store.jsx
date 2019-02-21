@@ -14,6 +14,7 @@ class Store extends React.Component {
     Moment.locale('ca');
 
     this.state = {
+      addStock: true,
       inventoryItems: [
         {
           id: 1,
@@ -36,18 +37,23 @@ class Store extends React.Component {
   }
 
   render() {
-    const { inventoryItems } = this.state;
+    const { inventoryItems, addStock } = this.state;
 
     return (
       <div className="Store">
-        <AddStockModal />
+        {addStock
+          && <AddStockModal onClose={() => this.setState({ addStock: false })} />
+        }
 
         <Body>
           <header>
             <div className="ButtonBar">
               <h2>Magatzem</h2>
               <div className="ButtonBar__ButtonSection">
-                <Button label="Afegir estoc" />
+                <Button
+                  label="Afegir estoc"
+                  onClick={() => this.setState({ addStock: true })}
+                />
               </div>
             </div>
           </header>
