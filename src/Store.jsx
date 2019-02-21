@@ -4,8 +4,7 @@ import Moment from 'moment';
 import Body from './Body';
 import StoreItem from './StoreItem';
 import Button from './Button';
-import Modal from './Modal';
-import Field from './Field';
+import AddStockModal from './AddStockModal';
 
 import './Store.css';
 
@@ -41,11 +40,7 @@ class Store extends React.Component {
 
     return (
       <div className="Store">
-        <Modal title="Nou estoc">
-          <Field label="Nom" />
-          <Field label="Quantitat" />
-          <Field label="Graduació" />
-        </Modal>
+        <AddStockModal />
 
         <Body>
           <header>

@@ -1,0 +1,58 @@
+@import './variables.scss';
+
+.Modal {
+  width: 352px;
+  background-color: $white;
+  color: $gray-600;
+  border-radius: $border-radius;
+
+  &__Header {
+    margin-top: 32px;
+  }
+
+  &__Body, &__Header {
+    padding: 0 32px;
+  }
+
+  &__Body {
+    padding-bottom: 32px;
+    width: 100%;
+  }
+
+  label {
+    display: block;
+  }
+
+  input {
+    background-color: $gray-100;
+    margin-top: 4px;
+    width: 100%;
+    border: 1px solid $gray-300;
+    height: 20px;
+  }
+
+  .Field {
+    margin: 12px 0 0 0;
+  }
+  
+  &__ButtonGroup {
+    background-color: $gray-100;
+    padding: 16px 24px 16px 0;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: $border-radius;
+  }
+
+  &__Backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(215, 16, 30, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

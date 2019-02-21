@@ -2,4 +2,8 @@
 
 .Icon {
   margin: 0 0.5rem;
+
+  &--close {
+    color: $gray-400;
+  }
 }

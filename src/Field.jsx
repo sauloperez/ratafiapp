@@ -4,7 +4,7 @@ function Field(props) {
   const { label } = props;
 
   return (
-    <div>
+    <div className="Field">
       <label>{ label }</label>
       <input />
     </div>
