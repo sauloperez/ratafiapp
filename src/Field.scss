@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+.Field {
+  padding: 0 12px;
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    background-color: $gray-100;
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid $gray-300;
+    font-size: 1em;
+    border-radius: $border-radius;
+  }
+}

@@ -1,12 +1,14 @@
 import React from 'react';
 
+import './Field.css';
+
 function Field(props) {
-  const { label } = props;
+  const { label, style } = props;
 
   return (
-    <div className="Field">
+    <div className="Field" style={ style }>
       <label>{ label }</label>
-      <input />
+      <input type="text" />
     </div>
   );
 }

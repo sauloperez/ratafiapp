@@ -10,31 +10,18 @@
     margin-top: 32px;
   }
 
-  &__Body, &__Header {
+  &__Header {
     padding: 0 32px;
   }
 
   &__Body {
+    padding: 0 20px;
     padding-bottom: 32px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  label {
-    display: block;
-  }
-
-  input {
-    background-color: $gray-100;
-    margin-top: 4px;
-    width: 100%;
-    border: 1px solid $gray-300;
-    height: 20px;
-  }
-
-  .Field {
-    margin: 12px 0 0 0;
-  }
-  
   &__ButtonGroup {
     background-color: $gray-100;
     padding: 16px 24px 16px 0;
