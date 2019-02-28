@@ -5,11 +5,22 @@ import Field from './Field';
 import Button from './Button';
 
 function AddStockDialog(props) {
+  const { onClick } = props;
+
+  const newStock = {
+    id: 3,
+    name: 'Barreja',
+    createdAt: 2018,
+    graduation: '27°',
+    quantity: 3,
+    lastConsumedAt: new Date(2018, 11, 5),
+  }
+
   return (
     <Modal
       title="Nou estoc"
       button={
-        <Button label="Afegir" />
+        <Button label="Afegir" onClick={() => onClick(newStock)} />
       }
       {...props}
     >

@@ -34,6 +34,15 @@ class Store extends React.Component {
         },
       ],
     };
+
+    this.handleStockAddition = this.handleStockAddition.bind(this);
+  }
+
+  handleStockAddition(newStock) {
+    debugger;
+    this.setState(prevState => ({
+      inventoryItems: [...prevState.inventoryItems, newStock]
+    }))
   }
 
   render() {
@@ -42,7 +51,10 @@ class Store extends React.Component {
     return (
       <div className="Store">
         {addStock
-          && <AddStockModal onClose={() => this.setState({ addStock: false })} />
+            && <AddStockModal
+              onClose={() => this.setState({ addStock: false })}
+              onClick={() => this.handleStockAddition()}
+            />
         }
 
         <Body>
