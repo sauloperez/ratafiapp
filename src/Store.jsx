@@ -14,7 +14,7 @@ class Store extends React.Component {
     Moment.locale('ca');
 
     this.state = {
-      addStock: true,
+      addStock: false,
       inventoryItems: [
         {
           id: 1,
