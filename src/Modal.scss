@@ -15,8 +15,8 @@
   }
 
   &__Body {
-    padding: 0 20px;
-    padding-bottom: 32px;
+    padding: 0 20px 20px 20px;
+    padding-bottom: 20px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -24,8 +24,7 @@
 
   &__ButtonGroup {
     background-color: $gray-100;
-    padding: 16px 24px 16px 0;
-    margin-top: 16px;
+    padding: 16px 32px;
     display: flex;
     flex-direction: row-reverse;
     border-radius: $border-radius;

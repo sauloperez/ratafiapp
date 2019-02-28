@@ -13,9 +13,9 @@ function AddStockDialog(props) {
       }
       {...props}
     >
-      <Field label="Nom" />
-      <Field label="Quantitat" style={{ width: "50%" }} />
-      <Field label="Graduació" style={{ width: "50%" }} />
+      <Field label="Nom" style={{ width: '100%' }} />
+      <Field label="Quantitat" style={{ width: '50%' }} />
+      <Field label="Graduació" style={{ width: '50%' }} />
     </Modal>
   );
 }
