@@ -5,36 +5,30 @@ import IconButton from './IconButton';
 
 import './Modal.css';
 
-class Modal extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+function Modal(props) {
+  const { title, children, button, onClose } = props;
 
-  render() {
-    const { title, children, button, onClose } = this.props;
-
-    return (
-      <div className="Modal__Backdrop">
-        <div className="Modal" style={{ position: 'relative' }}>
-          <IconButton
-            icon="times"
-            className="Icon Icon--close"
-            onClick={onClose}
-            style={{ position: 'absolute', top: '16px', right: '8px' }}
-          />
-          <header className="Modal__Header">
-            <h3>{ title }</h3>
-          </header>
-          <div className="Modal__Body">
-            { children }
-          </div>
-          <div className="Modal__ButtonGroup">
-            { button }
-          </div>
+  return (
+    <div className="Modal__Backdrop">
+      <div className="Modal" style={{ position: 'relative' }}>
+        <IconButton
+          icon="times"
+          className="Icon Icon--close"
+          onClick={onClose}
+          style={{ position: 'absolute', top: '16px', right: '8px' }}
+        />
+        <header className="Modal__Header">
+          <h3>{ title }</h3>
+        </header>
+        <div className="Modal__Body">
+          { children }
+        </div>
+        <div className="Modal__ButtonGroup">
+          { button }
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 Modal.defaultProps = { title: '' };
