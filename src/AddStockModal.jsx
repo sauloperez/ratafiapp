@@ -4,6 +4,8 @@ import Modal from './Modal';
 import Field from './Field';
 import Button from './Button';
 
+import StockItem from './models/stock_item';
+
 class AddStockDialog extends React.Component {
   constructor(props) {
     super(props);
@@ -35,14 +37,7 @@ class AddStockDialog extends React.Component {
     const { onClose } = this.props;
     const { name, quantity, strength } = this.state;
 
-    const newStock = {
-      id: 3,
-      name: name,
-      createdAt: 2018,
-      graduation: strength+'°',
-      quantity: quantity,
-      lastConsumedAt: new Date(2018, 11, 5),
-    }
+    const newStock = new StockItem(name, quantity, strength);
 
     return (
       <Modal
