@@ -7,7 +7,7 @@ import EllipsisButton from './EllipsisButton';
 import './StoreItem.css';
 
 function StoreItem(props) {
-  const { name, createdAt, graduation, quantity, lastConsumedAt } = props;
+  const { name, createdAt, strength, quantity, lastConsumedAt } = props;
 
   return (
     <tr>
@@ -15,7 +15,7 @@ function StoreItem(props) {
         <div>{name}</div>
         <div className="note">{createdAt}</div>
       </td>
-      <td>{graduation}</td>
+      <td>{strength}</td>
       <td>
         <div>{quantity}</div>
         <div className="note">{Moment(lastConsumedAt).fromNow()}</div>
@@ -28,7 +28,7 @@ function StoreItem(props) {
 StoreItem.propTypes = {
   name: PropTypes.string.isRequired,
   createdAt: PropTypes.number.isRequired,
-  graduation: PropTypes.string.isRequired,
+  strength: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
   lastConsumedAt: PropTypes.object.isRequired,
 };
