@@ -8,9 +8,12 @@ class AddStockDialog extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {}
+    this.state = {
+      name: '',
+    }
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(newStock) {
@@ -20,12 +23,17 @@ class AddStockDialog extends React.Component {
     onClose();
   }
 
+  handleChange(event) {
+    this.setState({ name: event.target.value });
+  }
+
   render() {
     const { onClose } = this.props;
+    const { name } = this.state;
 
     const newStock = {
       id: 3,
-      name: 'Barreja',
+      name: name,
       createdAt: 2018,
       graduation: '27°',
       quantity: 3,
@@ -41,7 +49,12 @@ class AddStockDialog extends React.Component {
         }
         {...this.props}
       >
-        <Field label="Nom" style={{ width: '100%' }} />
+        <Field
+          label="Nom"
+          style={{ width: '100%' }}
+          value={name}
+          onChange={this.handleChange}
+        />
         <Field label="Quantitat" style={{ width: '50%' }} />
         <Field label="Graduació" style={{ width: '50%' }} />
       </Modal>
