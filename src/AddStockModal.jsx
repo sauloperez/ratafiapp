@@ -5,7 +5,7 @@ import Field from './Field';
 import Button from './Button';
 
 function AddStockDialog(props) {
-  const { onClick } = props;
+  const { onSubmit, onClose } = props;
 
   const newStock = {
     id: 3,
@@ -16,11 +16,17 @@ function AddStockDialog(props) {
     lastConsumedAt: new Date(2018, 11, 5),
   }
 
+  function handleSubmit(newStock) {
+    onSubmit(newStock);
+    onClose();
+  }
+
   return (
     <Modal
       title="Nou estoc"
+      onClose={onClose}
       button={
-        <Button label="Afegir" onClick={() => onClick(newStock)} />
+        <Button label="Afegir" onClick={() => handleSubmit(newStock)} />
       }
       {...props}
     >

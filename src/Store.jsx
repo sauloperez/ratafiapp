@@ -35,13 +35,13 @@ class Store extends React.Component {
       ],
     };
 
-    this.handleStockAddition = this.handleStockAddition.bind(this);
+    this.handleCreateStock = this.handleCreateStock.bind(this);
   }
 
-  handleStockAddition(newStock) {
+  handleCreateStock(newStock) {
     debugger;
     this.setState(prevState => ({
-      inventoryItems: [...prevState.inventoryItems, newStock]
+      inventoryItems: prevState.inventoryItems.concat(newStock)
     }))
   }
 
@@ -53,7 +53,7 @@ class Store extends React.Component {
         {addStock
             && <AddStockModal
               onClose={() => this.setState({ addStock: false })}
-              onClick={() => this.handleStockAddition()}
+              onSubmit={this.handleCreateStock}
             />
         }
 
