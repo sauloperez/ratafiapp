@@ -39,7 +39,6 @@ class Store extends React.Component {
   }
 
   handleCreateStock(newStock) {
-    debugger;
     this.setState(prevState => ({
       inventoryItems: prevState.inventoryItems.concat(newStock)
     }))
