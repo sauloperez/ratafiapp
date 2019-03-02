@@ -4,37 +4,49 @@ import Modal from './Modal';
 import Field from './Field';
 import Button from './Button';
 
-function AddStockDialog(props) {
-  const { onSubmit, onClose } = props;
+class AddStockDialog extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const newStock = {
-    id: 3,
-    name: 'Barreja',
-    createdAt: 2018,
-    graduation: '27°',
-    quantity: 3,
-    lastConsumedAt: new Date(2018, 11, 5),
+    this.state = {}
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  function handleSubmit(newStock) {
+  handleSubmit(newStock) {
+    const { onSubmit, onClose } = this.props;
+
     onSubmit(newStock);
     onClose();
   }
 
-  return (
-    <Modal
-      title="Nou estoc"
-      onClose={onClose}
-      button={
-        <Button label="Afegir" onClick={() => handleSubmit(newStock)} />
-      }
-      {...props}
-    >
-      <Field label="Nom" style={{ width: '100%' }} />
-      <Field label="Quantitat" style={{ width: '50%' }} />
-      <Field label="Graduació" style={{ width: '50%' }} />
-    </Modal>
-  );
+  render() {
+    const { onClose } = this.props;
+
+    const newStock = {
+      id: 3,
+      name: 'Barreja',
+      createdAt: 2018,
+      graduation: '27°',
+      quantity: 3,
+      lastConsumedAt: new Date(2018, 11, 5),
+    }
+
+    return (
+      <Modal
+        title="Nou estoc"
+        onClose={this.onClose}
+        button={
+          <Button label="Afegir" onClick={() => this.handleSubmit(newStock)} />
+        }
+        {...this.props}
+      >
+        <Field label="Nom" style={{ width: '100%' }} />
+        <Field label="Quantitat" style={{ width: '50%' }} />
+        <Field label="Graduació" style={{ width: '50%' }} />
+      </Modal>
+    );
+  }
 }
 
 export default AddStockDialog;
