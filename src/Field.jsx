@@ -6,7 +6,7 @@ function Field(props) {
   const { label, style, ...otherProps } = props;
 
   return (
-    <div className="Field" style={ style }>
+    <div className="Field Field--error" style={style}>
       <label>{ label }</label>
       <input type="text" {...otherProps} />
     </div>
