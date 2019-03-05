@@ -66,6 +66,7 @@ class AddStockDialog extends React.Component {
           label="Graduació"
           name="strength"
           value={strength}
+          placeholder="20°"
           onChange={this.handleChange}
           style={{ width: '50%' }}
         />

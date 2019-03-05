@@ -6,15 +6,21 @@
   label {
     display: block;
     margin-bottom: 8px;
+    color: $gray-600;
   }
 
   input {
+    color: $gray-800;
     background-color: $gray-100;
     margin-bottom: 16px;
     padding: 8px 16px;
     width: 100%;
     border: 1px solid $gray-300;
-    font-size: 1em;
+    font-size: 14px;
     border-radius: $border-radius;
+
+    &::placeholder {
+      color: $gray-400;
+    }
   }
 }
