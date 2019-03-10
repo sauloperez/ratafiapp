@@ -5,6 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
+
+import '../index.css';
 import Field from '../Field';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
@@ -26,6 +28,7 @@ storiesOf('Field', module)
     <Field
       isInvalid
       style={{ width: '120px' }}
+      label="Nom"
       validationMessage="Valor invalid"
     />
   ));
