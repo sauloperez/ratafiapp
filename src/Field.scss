@@ -22,6 +22,14 @@
     &::placeholder {
       color: $gray-400;
     }
+
+    &:focus {
+      outline-width: 1px;
+      outline-color: $brand-200;
+      border-color: $brand-200;
+      box-shadow: $border-shadow;
+      background-color: $white;
+    }
   }
 
   &--error {
